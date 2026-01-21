@@ -10,7 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         lspOverlay = final: prev: {
-          lsp-framework = prev.stdenv.mkDerivation rec {
+          lsp-framework = final.callPackage prev.stdenv.mkDerivation rec {
             pname = "lsp-framework";
             version = "1.3.0";
 
