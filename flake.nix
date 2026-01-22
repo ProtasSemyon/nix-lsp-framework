@@ -16,13 +16,13 @@
       lspOverlay = final: prev: {
         lsp-framework = final.callPackage prev.stdenv.mkDerivation rec {
           pname = "lsp-framework";
-          version = "1.3.0";
+          version = "1.3.1";
 
           src = prev.fetchFromGitHub {
-            owner = "leon-bckl";
+            owner = "ProtasSemyon";
             repo = "lsp-framework";
             rev = "${version}";
-            hash = "sha256-ajYsCUDx1h93uCYbBv1TKvHpJJbXSj4bqhWyJ1vM9N0=";
+            hash = "sha256-LLHclj1JbQG+N10kyZq6PQMmdTujARxdA6kjjV/QWLg=";
           };
 
           nativeBuildInputs = [ prev.cmake ];
